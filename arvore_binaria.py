@@ -86,23 +86,23 @@ class Arvore_Binaria:
                 
 # Exemplo de uso
 arvore = Arvore_Binaria()
-arvore.inserir_em_nivel(4)
-arvore.inserir_em_nivel(2)
-arvore.inserir_em_nivel(6)
-arvore.inserir_em_nivel(1)
-arvore.inserir_em_nivel(3)
 arvore.inserir_em_nivel(5)
+arvore.inserir_em_nivel(3)
 arvore.inserir_em_nivel(7)
+arvore.inserir_em_nivel(2)
+arvore.inserir_em_nivel(4)
+arvore.inserir_em_nivel(6)
+arvore.inserir_em_nivel(8)
 
 print("Pré-ordem:")
 arvore.mostrar_pre_ordem()
+
 print("\nIn-ordem:")
 arvore.mostrar_in_ordem()
+
 print("\nPós-ordem:")
 arvore.mostrar_pos_ordem()
+
 print("\nBFS:")
 arvore.bfs()
-
-
-            
-        
+   
