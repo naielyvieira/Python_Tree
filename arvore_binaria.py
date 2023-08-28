@@ -1,3 +1,4 @@
+from queue import Queue
 class Arvore_Binaria:
     def __init__(self, valor):
         self.valor = valor
@@ -46,7 +47,19 @@ class Arvore_Binaria:
             self.direita.pos_order()
         print(self.valor)
         
-        
+    def bfs(self):
+        fila = Queue()
+        fila.put(self)
+
+        while not fila.empty():
+            no_atual = fila.get()
+            print(no_atual.valor)
+
+            if no_atual.esquerda:
+                fila.put(no_atual.esquerda)
+
+            if no_atual.direita:
+                fila.put(no_atual.direita)    
   
 # Criando uma árvore binária
 raiz = Arvore_Binaria(1)
@@ -66,7 +79,9 @@ raiz.in_order()
 
 print("\nPost-order Traversal:")
 raiz.pos_order()
-      
+
+print("\nBFS Traversal:")
+raiz.bfs()   
         
 #Teste
 #Arvore = Arvore_Binaria('a')
